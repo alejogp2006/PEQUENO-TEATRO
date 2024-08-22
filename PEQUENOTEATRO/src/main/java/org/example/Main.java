@@ -75,25 +75,20 @@ public class Main {
                 }
             } else if (opcionElegida==3) {
                 System.out.println("Buscando por nombre de obra");
-                //Para buscar en un arreglo necesito el indice que estoy buscando
                 System.out.print("Digita el nombre de la obra que quieres buscar: ");
                 String nombreObraABucar=leerTeclado.nextLine();
 
                 //Recorriendo el arreglo para buscar
                 for (HashMap<String,Object>obraAuxiliar: obras){
                     System.out.println(obraAuxiliar.get("nombre"));
-                    //Comparar si el nombre que encontro el auxiliar es el que digito el usuario
                     if (nombreObraABucar.equals(obraAuxiliar.get("nombre"))){
                         System.out.println("obra encontrada");
-                        //Mostrar la informacion del producto que se encontro
                         System.out.println(obraAuxiliar);
-                        //como encontrar el indice del producto auxiliar
-                        //si es necesario encontrar el indice
                     }
                 }
 
             } else if (opcionElegida==4) {
-                System.out.println("Modificando producto");
+                System.out.println("Modificando obra");
                 System.out.print("Ingresa el nombre de la obra para modificar el costo: ");
                 String obraAmodificar=leerTeclado.nextLine();
                 for (HashMap<String, Object> obraAuxiliar2:obras){
